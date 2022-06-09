@@ -120,7 +120,7 @@ div.contentRight{
     grid-area: B;
 }
 
-#recipe2 img, .contentRight img{
+.contentRight img{
     max-width: 100%;
     width: 100rem;
     height: 55rem;
@@ -128,6 +128,10 @@ div.contentRight{
 }
 
 #recipe2 img{
+    max-width: 100%;
+    width: 100rem;
+    height: 55rem;
+    margin-top: 15rem;
     display: block;
     margin-inline: auto;
 }
