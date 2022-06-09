@@ -120,11 +120,30 @@ div.contentRight{
     grid-area: B;
 }
 
-.contentRight img{
+#recipe2 img, .contentRight img{
     max-width: 100%;
     width: 100rem;
     height: 55rem;
     margin-top: 15rem;
+}
+
+#recipe2 img{
+    display: block;
+    margin-inline: auto;
+}
+
+#recipe2 h2, #recipe2 h3, #recipe2 li{
+    text-align: center;
+}
+
+#recipe2 li{
+    margin-left: 0;
+    list-style: none;
+}
+
+#recipe2 button{
+    margin-inline: auto;
+    margin-bottom: -40rem;
 }
 
 div.content{
@@ -148,7 +167,7 @@ li{
     margin-left: 4rem;
 }
 
-.contentRight button.passo{
+button.passo{
     display: block;
     margin-inline: auto;
     margin-top: 3rem;
