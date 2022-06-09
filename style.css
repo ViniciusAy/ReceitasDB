@@ -1,0 +1,219 @@
+/* GENERAL */
+:root{
+    font-size: 62.5%; /* 1rem = 10px */
+    --primary-color: #942e20;
+    --secundary-color: #68241d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button{
+    border-radius: 1rem;
+    background-color: transparent;
+    width: fit-content;
+    border: none;
+}
+
+
+h2 {
+    margin-top: 20rem;
+}
+
+/* NAV */
+nav{
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 35rem;
+    right: 35rem;
+    z-index: 1;
+    justify-content: space-between;    
+    background-color: var(--primary-color);
+    padding: 1rem;
+}
+
+nav img#logo{
+    width: 10rem;
+    max-width: 100%;
+}
+
+#buttonMenu{
+    border: none;
+    background-color: transparent;
+    width: fit-content;
+    position: relative;
+    width: 6rem;
+    z-index: 3;
+    cursor: pointer;
+    max-width: 100%;
+}
+
+/* MENU-EXPANDED */
+.menu{
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+}
+
+.menu-expanded{
+    visibility: visible;
+    opacity: 1;
+    position: fixed;
+    right: 35rem;
+    background-color: var(--secundary-color);
+    padding-top: 15rem;
+    padding-inline: 10rem;
+    padding-bottom: 10rem;
+    z-index: 2;
+    top: 0;
+}
+
+.menu a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 4rem;
+    text-align: center;
+}
+
+.menu ul{
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    list-style: none;
+}
+
+/* BODY */
+body{
+    margin-inline: 35rem;
+}
+
+body h1{
+    font-size: 20rem;
+    text-align: center;
+    margin-top: 22rem;
+    font-family: 'Dancing Script';
+    font-weight: 400;
+}
+
+body img#pratos{
+    height: 90rem;
+    display: block;
+    margin-inline: auto;
+    margin-top: 10rem;
+    margin-bottom: -30rem;
+    max-width: 100%;
+}
+
+/* Recipes Pages */
+#recipe{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-areas: 'A B';
+}
+
+div.contentRight{
+    grid-area: B;
+}
+
+.contentRight img{
+    max-width: 100%;
+    width: 100rem;
+    height: 55rem;
+    margin-top: 15rem;
+}
+
+div.content{
+    grid-area: A;
+    margin-top: 15rem;
+}
+
+h2{
+    font-size: 5rem;
+    margin: 0;
+}
+
+h3{
+    font-size: 3rem;
+    margin-top: 1rem;
+}
+
+li{
+    font-size: 2rem;
+    margin-top: 1rem;
+    margin-left: 4rem;
+}
+
+.contentRight button.passo{
+    display: block;
+    margin-inline: auto;
+    margin-top: 3rem;
+    border: solid;
+    border-radius: 2rem;
+    font-size: 4rem;
+    width: 36rem;
+    height: 5rem;
+    cursor: pointer;
+}
+
+/* POPUP */
+div.popup{
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+}
+
+div.popup-open{
+    visibility: visible;
+    opacity: 1;
+    position: fixed;
+    z-index: 3;
+    margin-inline: auto;
+    background-color: var(--secundary-color);
+    top: 50%;
+    left: 50%;
+    margin-left: -35rem;
+    margin-top: -28rem;
+    color: #fff;
+    padding: 5rem;
+    border: solid;
+    border-width: 0.5rem;
+    border-color: #000;
+    border-radius: 3rem;
+    max-width: 65rem;
+}
+
+div.popup-open ul{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+div.popup-open button.closePasso{
+    margin-top: 5rem;
+    color: #fff;
+    display: flex;
+    margin-inline: auto;
+    font-size: 4rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* FOOTER */
+footer{
+    margin-top: 44.3rem;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+}
+
+footer h2{
+    font-size: 3.8rem;
+}

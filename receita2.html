@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReceitasDB</title>
+
+    <link rel="stylesheet" href="./style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <nav>
+        <a href="./index.html"><img id="logo" src="./assets/logo.png" alt="Logo ReceitasDB"></a>
+
+        <div id="menuHamburger" class="menu">
+            <ul>
+                <li><a href="./receita1.html">Receita Strogonoff</a></li>
+                <li><a href="./receita2.html">Receita Parmegiana</a></li>
+            </ul>
+        </div>
+
+        <button onclick="openMenu()">
+            <img id="buttonMenu" src="./assets/button.png" alt="Botão Menu">
+        </button>  
+                     
+    </nav>
+
+    <section id="recipe">    
+        <div class="content">
+            <h2>Receita Parmegiana</h2>
+            <h3>Ingredientes</h3>
+            <p>
+                <ul>
+                    <li>1 kg de carne para bife</li>
+                    <li>3 dentes de alho</li>
+                    <li>1 ovo</li>
+                    <li>>farinha de rosca</li>
+                    <li>óleo</li>
+                    <li>1/2 cebola picada</li>
+                    <li>1 lata de molho de tomate</li>
+                    <li>1 colher (sobremesa) de catchup</li>
+                    <li>1 colher (chá) de mostarda</li>
+                    <li>salsinha e cebolinha a gosto</li>
+                    <li>sal a gosto</li>
+                    <li>queijo mussarela</li>
+                    <li>orégano</li>
+                </ul>
+            </p>
+        </div>            
+        
+        <div class="contentRight">
+            <img src="./assets/parmegiana.jpeg" alt="Foto de um prato de parmegiana">
+            <button class="passo" onclick="popUp()">Passo a Passo</button>
+        </div>
+    </section>
+
+    <div id="pop" class="popup">
+        <ul>
+            <li>Tempere os bifes com alho e sal e reserve.</li>
+            <li>Bata o ovo inteiro e passe os bifes pelo ovo e pela farinha de rosca.</li>
+            <li>Aqueça em uma frigideira o óleo e frite os bifes, escorra-os em papel-toalha e vá dispondo em um refratário.</li>
+            <li>Refogue a cebola no óleo, junte o molho de tomate, o catchup, a mostarda, o sal, salsinha e cebolinha, abaixe o fogo e deixe o molho apurar.</li>
+            <li>Despeje o molho pronto sobre os bifes e distribua queijo mussarela sobre os bifes.</li>
+            <li>Salpique delicadamente um pouco de orégano por cima do queijo e leve ao forno até derreter o queijo.</li>
+            <li>Sirva com arroz e purê de batatas.</li>
+        </ul>
+        <button class="closePasso" onclick="closePopUp()">X</button>
+    </div>
+    
+    <script src="./main.js"></script>
+
+    <footer>
+        <h2>Contato: (11) 3952-2500 R. Marambaia, 200 - Casa Verde, São Paulo - SP, 02513-000</h2>
+    </footer>
+</body>
+</html>
