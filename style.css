@@ -145,8 +145,16 @@ div.contentRight{
     list-style: none;
 }
 
-#recipe2 button{
+#recipe2 button.passo{
+    display: block;
     margin-inline: auto;
+    margin-top: 3rem;
+    border: solid;
+    border-radius: 2rem;
+    font-size: 4rem;
+    width: 36rem;
+    height: 5rem;
+    cursor: pointer;
     margin-bottom: -40rem;
 }
 
