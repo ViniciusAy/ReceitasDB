@@ -3,6 +3,7 @@
     font-size: 62.5%; /* 1rem = 10px */
     --primary-color: #942e20;
     --secundary-color: #68241d;
+    --hover-color-grey: #808080;
 }
 
 * {
@@ -18,9 +19,28 @@ button{
     border: none;
 }
 
+li{
+    font-size: 2rem;
+    margin-top: 1rem;
+    margin-left: 4rem;
+}
 
-h2 {
+h2{
     margin-top: 20rem;
+    font-size: 5rem;
+    margin: 0;
+}
+
+h3{
+    font-size: 3rem;
+    margin-top: 1rem;
+}
+
+h4{
+    color: #fff;
+    font-family: 'Dancing Script';
+    font-size: 8rem;
+    text-align: center;
 }
 
 /* NAV */
@@ -34,6 +54,8 @@ nav{
     justify-content: space-between;    
     background-color: var(--primary-color);
     padding: 1rem;
+    border-bottom-left-radius: 3rem;
+    border-bottom-right-radius: 3rem;
 }
 
 nav img#logo{
@@ -52,12 +74,17 @@ nav img#logo{
     max-width: 100%;
 }
 
+#buttonMenu:hover{
+    transform: translateY(-0.2rem);
+}
+
 /* MENU-EXPANDED */
 .menu{
     overflow: hidden;
     visibility: hidden;
     opacity: 0;
     position: fixed;
+    transform: translateY(-100%);
 }
 
 .menu-expanded{
@@ -70,7 +97,11 @@ nav img#logo{
     padding-inline: 10rem;
     padding-bottom: 10rem;
     z-index: 2;
+    border-bottom-left-radius: 3rem;
+    border-bottom-right-radius: 3rem;
     top: 0;
+    transition: transform 400ms;
+    transform: translateY(0);
 }
 
 .menu a{
@@ -85,6 +116,10 @@ nav img#logo{
     flex-direction: column;
     gap: 5rem;
     list-style: none;
+}
+
+.menu a:hover{
+    color: var(--hover-color-grey);
 }
 
 /* BODY */
@@ -105,14 +140,26 @@ body img#pratos{
     display: block;
     margin-inline: auto;
     margin-top: 10rem;
-    margin-bottom: -30rem;
     max-width: 100%;
+}
+
+.text p{
+    display: block;
+    margin-top: 20rem;
+    font-family: sans-serif;
+    font-size: 6rem;
+    text-align: center;
+    margin-bottom: -20rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 10rem;
+    padding: 5rem;
 }
 
 /* Recipes Pages */
 #recipe{
     display: grid;
-    grid-template-columns: 1fr 100rem;
+    grid-template-columns: auto 100rem;
     grid-template-areas: 'A B';
 }
 
@@ -120,7 +167,7 @@ div.contentRight{
     grid-area: B;
 }
 
-.contentRight img{
+#recipe2 img, .contentRight img{
     max-width: 100%;
     width: 100rem;
     height: 55rem;
@@ -128,10 +175,6 @@ div.contentRight{
 }
 
 #recipe2 img{
-    max-width: 100%;
-    width: 100rem;
-    height: 55rem;
-    margin-top: 15rem;
     display: block;
     margin-inline: auto;
 }
@@ -145,38 +188,14 @@ div.contentRight{
     list-style: none;
 }
 
-#recipe2 button.passo{
-    display: block;
+#recipe2 button{
     margin-inline: auto;
-    margin-top: 3rem;
-    border: solid;
-    border-radius: 2rem;
-    font-size: 4rem;
-    width: 36rem;
-    height: 5rem;
-    cursor: pointer;
     margin-bottom: -40rem;
 }
 
 div.content{
     grid-area: A;
     margin-top: 15rem;
-}
-
-h2{
-    font-size: 5rem;
-    margin: 0;
-}
-
-h3{
-    font-size: 3rem;
-    margin-top: 1rem;
-}
-
-li{
-    font-size: 2rem;
-    margin-top: 1rem;
-    margin-left: 4rem;
 }
 
 button.passo{
@@ -191,12 +210,19 @@ button.passo{
     cursor: pointer;
 }
 
+button.passo:hover{
+    background-color: #000;
+    color: #fff;
+    transition: 250ms;
+}
+
 /* POPUP */
 div.popup{
     overflow: hidden;
     visibility: hidden;
     opacity: 0;
     position: fixed;
+    transform: scale(0);
 }
 
 div.popup-open{
@@ -209,7 +235,7 @@ div.popup-open{
     top: 50%;
     left: 50%;
     margin-left: -35rem;
-    margin-top: -28rem;
+    margin-top: -50rem;
     color: #fff;
     padding: 5rem;
     border: solid;
@@ -217,6 +243,8 @@ div.popup-open{
     border-color: #000;
     border-radius: 3rem;
     max-width: 65rem;
+    transition: transform 500ms;
+    transform: scale(1);
 }
 
 div.popup-open ul{
@@ -235,6 +263,37 @@ div.popup-open button.closePasso{
     cursor: pointer;
 }
 
+div.popup-open button.closePasso:hover{
+    transform: translateY(-0.2rem);
+}
+
+/* SEARCH */
+.recipe-search{
+    margin-top: 25rem;
+    display: flex;
+    justify-content: center;
+    margin-inline: auto;
+}
+
+#search-button{
+    border: solid #000;
+    border-left: none;
+    border-radius: 0;
+    cursor: pointer;
+}
+
+#search-input{
+    border: solid #000;
+    border-right: none;
+    width: 55rem;
+    font-size: 3rem;
+}
+
+#search-button svg{
+    width: 5rem;
+    height: 5rem;
+}
+
 /* FOOTER */
 footer{
     margin-top: 44.3rem;
@@ -243,8 +302,15 @@ footer{
     text-align: center;
     padding-top: 4rem;
     padding-bottom: 2rem;
+    border-top-left-radius: 3rem;
+    border-top-right-radius: 3rem;
 }
 
 footer h2{
     font-size: 3.8rem;
+}
+
+.footer-search footer{
+    margin-top: 75rem;
+    bottom: 0;
 }
